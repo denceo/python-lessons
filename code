@@ -1,0 +1,21 @@
+#1
+a = input()
+st = a[len(a) - 5: len(a)]
+ars = a[0:len(a) - 5]
+st1 = st[::-1]
+c = ars + st1
+print(c, ars, st, st1)
+#1.1
+a = input()
+st = a[-5:]
+print(a[:-5] + st[::-1])
+#2
+a = input()
+for i in range(len(a) - 3, 0, -3):
+    a = a[:i] + "," + a[i:]
+print(a)
+#3
+a = input().split()
+for i in range(0, len(a) - 1, 2):
+    a[i], a[i + 1] = a[i + 1], a[i]
+print(*list(map(int, a)))
